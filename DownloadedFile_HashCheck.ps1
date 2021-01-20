@@ -12,6 +12,7 @@ Switch ($Checksum.Length){
     {$_ -eq 64}{$Hash = "SHA256"}
     Default {throw Read-Host "
     Hash length does not match SHA256, SHA1 or MD5.  
+    
     Press Enter to exit"}
     }
 
