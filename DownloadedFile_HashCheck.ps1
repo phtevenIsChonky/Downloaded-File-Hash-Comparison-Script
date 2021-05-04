@@ -6,6 +6,8 @@ $DownloadedFile = (Get-ChildItem $env:userprofile\Downloads\ | Sort-Object LastW
 
 $Checksum = Read-Host -Prompt "Please enter the known-good checksum from the download source"
 
+$Checksum = $Checksum.Trim().ToUpper()
+
 Switch ($Checksum.Length){
     {$_ -eq 32}{$Hash = "MD5"}
     {$_ -eq 40}{$Hash = "SHA1"}
